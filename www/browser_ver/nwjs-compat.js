@@ -341,6 +341,10 @@ require.libs.fs = {
             throw e;
         }
         return xhr.status === 200 || xhr.status === 0;
+    },
+    
+    unlinkSync: function() {
+        // Literally just do nothing
     }
 };
 
