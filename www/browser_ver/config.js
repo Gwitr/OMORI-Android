@@ -1,14 +1,3 @@
-// PUT THE ENCRYPTION KEY IN-BETWEEN THE QUOTES
-var encryptionKey = "";
-
-
-
-
-
-
-
-
-
 window.platform = "android";
 
 process.env = {
@@ -17,6 +6,6 @@ process.env = {
 
 window.nw = {
     App: {
-        argv: `--${encryptionKey}`
+        argv: "--"
     }
 };
