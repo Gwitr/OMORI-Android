@@ -11,9 +11,9 @@ It doesn't patch any files of the game, only adding new ones.
 ## How to install
 
 1) Download the repository and extract it somewhere.
-2) Take the "www" folder of your OMORI 1.0.0 install and copy it to /sdcard (should be called "\Internal storage" or something on Windows)
+2) Take the "www" folder of your OMORI 1.0.0 install and copy it to /sdcard on your phone (should be called "\Internal storage" or something on Windows)
 3) Rename the copy to "OMORI" (all caps)
-4) Take the contents of the "www" folder you just downloaded and put them inside of the "OMORI" folder that you just created.
+4) Take the contents of the "www" folder you just downloaded and put them inside of the "OMORI" folder that you just created. Click "yes" if prompted to merge folders.
 5) Move the APK to your phone and install it.
 
 This should be enough to have the game work. Please report any bugs under the Issues tab!
