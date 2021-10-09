@@ -381,12 +381,15 @@ window.onerror = function(message, source, lineno, colno, error) {
     document.getElementById("consolearea").innerHTML += "[ERROR] " + error.stack + "\n";
 }
 
+var allLogs = "";
 var origConsoleLog = console.log;
 console.log = function(...rest) {
     document.getElementById("consolearea").innerHTML += "[LOG] " + String(rest) + "\n";
+    allLogs += "[LOG] " + String(rest) + "\n";
     origConsoleLog(...rest);
 }
 
+/*
 var setSizesInterval;
 setSizesInterval = setInterval(function() {
     console.log("Interval fired!");
@@ -406,6 +409,7 @@ setSizesInterval = setInterval(function() {
         element.style["display"] = "inline";
     }
 }, 500);
+*/
 
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log("setup textarea scrolling");
