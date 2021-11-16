@@ -323,8 +323,9 @@ require.libs.fs = {
 
     existsSync: function(path) {
         let tmparr = require.libs.path._solve_dots(path).split("/");
-        if (tmparr[tmparr.length - 2] === "save" && ["config.rpgsave", "file1.rpgsave", "file2.rpgsave", "file3.rpgsave", "file4.rpgsave", "file5.rpgsave", "file6.rpgsave", "global.rpgsave", "TITLEDATA"].contains(tmparr[tmparr.length - 1])) {
-            return true;
+        
+        if (tmparr[tmparr.length - 2] === "save") {
+            return NativeFunctions.saveFileExists("/sdcard/OMORI/save/" + tmparr[tmparr.length - 1]);
         }
         if (tmparr[tmparr.length - 1] === "save") {
             return true;

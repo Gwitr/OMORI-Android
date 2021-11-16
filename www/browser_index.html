@@ -18,72 +18,43 @@
                 position: relative;
                 left: -50%;
             }
-        
-            .controler-button {
-                position: absolute;
-                z-index: 99;
-                width: 12vh;
-                height: 12vh;
-            }
-
-            .left-dpad {
-                left: 5vh;
-                bottom: 22vh;
-            }
-
-            .right-dpad {
-                left: 29vh;
-                bottom: 22vh;
-            }
-
-            .up-dpad {
-                left: 17vh;
-                bottom: 34vh;
-            }
-
-            .down-dpad {
-                left: 17vh;
-                bottom: 10vh;
+            
+            #debug-textarea-container {
+                width: 100vw; 
+                height: 80vh; 
+                margin: auto; 
+                display: flex; 
+                flex-direction: column; 
+                border: none;
             }
             
-            .z-button {
-                bottom: 20vh;
-                right: 35vh;
-                width: 15vh;
-                height: 15vh;
-            }
-            
-            .x-button {
-                bottom: 20vh;
-                right: 10vh;
-                width: 15vh;
-                height: 15vh;
+            #consolearea {
+                display: none;
+                font-size: 10px;
+                box-sizing: border-box;
+                height: 100%;
+                resize: none;
+                background-color: black;
+                color: white;
             }
         </style>
-        
+
         <meta charset="UTF-8">
-        <title>HTML5 OMORI</title>
+        <title>OMORI for Android (not official)</title>
         <script type="text/javascript" src="browser_ver/AES-JS/aes-js.js"></script>
         <script type="text/javascript" src="browser_ver/nwjs-compat.js"></script>
         <script type="text/javascript" src="browser_ver/config.js"></script>
     </head>
     
-    <body style="position: fixed; background-color: black; margin: 0; padding: 0; ">
+    <body style="position: fixed; background-color: black; margin: 0; padding: 0;">
         <div id="loading-text">
             <div id="loading-text-inner">Loading the game,<br>please wait...</div>
+        </div>        
+        <div id="debug-textarea-container">
+            <textarea id="consolearea" readonly></textarea>
         </div>
-        <!--
-        <button onmousedown="button_down({keyCode: 37})"           onmouseup="button_up({keyCode: 37})"           style="display: none;" class="controler-button left-dpad"></button>
-        <button onmousedown="button_down({keyCode: 39})"           onmouseup="button_up({keyCode: 39})"           style="display: none;" class="controler-button right-dpad"></button>
-        <button onmousedown="button_down({keyCode: 38})"           onmouseup="button_up({keyCode: 38})"           style="display: none;" class="controler-button up-dpad"></button>
-        <button onmousedown="button_down({keyCode: 40})"           onmouseup="button_up({keyCode: 40})"           style="display: none;" class="controler-button down-dpad"></button>
-        <button onmousedown="button_down({keyCode: 90, key: 'z'})" onmouseup="button_up({keyCode: 90, key: 'z'})" style="display: none;" class="controler-button z-button"></button>
-        <button onmousedown="button_down({keyCode: 88, key: 'x'})" onmouseup="button_up({keyCode: 88, key: 'x'})" style="display: none;" class="controler-button x-button"></button>
-        -->
         
-        <div style="width: 100vw; height: 80vh; margin: auto; display: flex; flex-direction: column; border: none;">
-            <textarea id="consolearea" style="display: none; font-size: 10px; box-sizing: border-box; height: 100%; resize: none; background-color: black; color: white; " readonly></textarea>
-        </div>
+        <!-- Game code loaded here -->
         <script type="text/javascript" src="./js/libs/pixi.js"></script>
         <script type="text/javascript" src="./js/libs/pixi-tilemap.js"></script>
         <script type="text/javascript" src="./js/libs/pixi-picture.js"></script>
